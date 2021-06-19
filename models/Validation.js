@@ -33,7 +33,7 @@ function Validation() {
 
     //Kiểm tra độ dài
     this.kiemTraDoDai = function(input, selectorError, minLength, maxLength, name){
-        if(Number(input).length < minLength || Number(input).length > maxLength){
+        if(input.length < minLength || input.length > maxLength){
             document.querySelector(selectorError).innerHTML = `${name} phải từ ${minLength} đến ${maxLength} ký số!`;
             return false;
         }
